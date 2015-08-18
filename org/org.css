@@ -91,17 +91,20 @@ h1 {
 }
 
 h2 {
+    background: #EEEEFF none repeat scroll 0 0;        
     font-size: 180%;
     border-bottom: 1px solid #ccc;
     padding: .2em;
 }
 
 h3 {
+    background: #EEEEFF none repeat scroll 0 0;    
     font-size: 120%;
     border-bottom: 1px solid #eee;
 }
 
 h4 {
+    background: #EEEEFF none repeat scroll 0 0;        
     font-size: 110%;
     border-bottom: 1px solid #eee;
 }
@@ -158,13 +161,14 @@ div#postamble a:hover {
 }
 
 table {
+    border: 0px;
     font-size: 100%;
     border-collapse: collapse;
     margin: .5em 0;
 }
 
 th, td {
-    border: 1px solid #777;
+    border: 0px solid #777;
     padding: .3em;
     margin: 2px;
 }
@@ -216,8 +220,38 @@ span.underline {
 .done { color: green; }
 .timestamp { color: gray }
 .timestamp-kwd { color: #f59ea0; }
-.tag { background-color:#add8e6; font-weight:normal }
+.tag { background-color:#AAFFAA; font-weight:normal } /* add8e6 */
 .target { background-color: #551a8b; }
+
+
+.badge-checkpoint {
+  color: #FFFFFF;
+  vertical-align: baseline;
+  white-space: nowrap;
+  padding: 1px 9px 2px;
+  border-radius: 15% 0% 15% 0%;
+  background-color: #DDAA00;
+}
+
+.badge-mini {
+  color: #FFFFFF;
+  vertical-align: baseline;
+  white-space: nowrap;
+  padding: 1px 9px 2px;
+  border-radius: 20% 0% 20% 0%;
+  background-color: #99CC00;
+}
+
+.badge-coming {
+  color: #FFFFFF;
+  vertical-align: baseline;
+  white-space: nowrap;
+  padding: 1px 9px 2px;
+  border-radius: 20% 0% 20% 0%;
+  background-color: #8080AA;
+}
+
+
 pre {
        border: 1pt solid #AEBDCC;
        background-color: #F3F5F7;
@@ -228,6 +262,31 @@ table { border-collapse: collapse; }
 td, th {
   vertical-align: top;
 }
+
+
+
+/*
+// Colors
+
+.badge {
+  // Important (red)
+  &-important         { background-color: @errorText; }
+  &-important[href]   { background-color: darken(@errorText, 10%); }
+  // Warnings (orange)
+  &-warning           { background-color: @orange; }
+  &-warning[href]     { background-color: darken(@orange, 10%); }
+  // Success (green)
+  &-success           { background-color: @successText; }
+  &-success[href]     { background-color: darken(@successText, 10%); }
+  // Info (turquoise)
+  &-info              { background-color: @infoText; }
+  &-info[href]        { background-color: darken(@infoText, 10%); }
+  // Inverse (black)
+  &-inverse           { background-color: @grayDark; }
+  &-inverse[href]     { background-color: darken(@grayDark, 10%); }
+}
+
+*/
 
 /* Source code formatting */
 
