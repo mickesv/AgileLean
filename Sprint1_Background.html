@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Sprint 1: Background</title>
+<!-- 2015-08-18 Tue 10:57 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Mikael Svahnberg" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="org/org.css" />
+
+<script type="text/javascript" src="http://orgmode.org/org-info.js">
+/**
+ *
+ * @source: http://orgmode.org/org-info.js
+ *
+ * @licstart  The following is the entire license notice for the
+ *  JavaScript code in http://orgmode.org/org-info.js.
+ *
+ * Copyright (C) 2012-2013 Free Software Foundation, Inc.
+ *
+ *
+ * The JavaScript code in this tag is free software: you can
+ * redistribute it and/or modify it under the terms of the GNU
+ * General Public License (GNU GPL) as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option)
+ * any later version.  The code is distributed WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+ *
+ * As additional permission under GNU GPL version 3 section 7, you
+ * may distribute non-source (e.g., minimized or compacted) forms of
+ * that code without the copy of the GNU GPL normally required by
+ * section 4, provided you include this license notice and a URL
+ * through which recipients can access the Corresponding Source.
+ *
+ * @licend  The above is the entire license notice
+ * for the JavaScript code in http://orgmode.org/org-info.js.
+ *
+ */
+</script>
+
+<script type="text/javascript">
+
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set("TOC_DEPTH", "4");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "0");
+org_html_manager.set("VIEW", "showall");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Sprint 1: Background</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. About this Sprint</a></li>
+<li><a href="#sec-2">2. Sprint Goals</a></li>
+<li><a href="#sec-3">3. Readings</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Book Chapters</a></li>
+<li><a href="#sec-3-2">3.2. Screencasts</a></li>
+<li><a href="#sec-3-3">3.3. Articles</a></li>
+<li><a href="#sec-3-4">3.4. Further Reading&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Optional">Optional</span></span></a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Experiential Learning</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Introduction</a></li>
+<li><a href="#sec-4-2">4.2. <span class="todo TODO">TODO</span> Assignment: Conduct a VSM</a>
+<ul>
+<li><a href="#sec-4-2-1">4.2.1. Tasks</a>
+<ul>
+<li><a href="#sec-4-2-1-1">4.2.1.1. Context</a></li>
+<li><a href="#sec-4-2-1-2">4.2.1.2. Purpose</a></li>
+<li><a href="#sec-4-2-1-3">4.2.1.3. Values</a></li>
+<li><a href="#sec-4-2-1-4">4.2.1.4. Scoping</a></li>
+<li><a href="#sec-4-2-1-5">4.2.1.5. Stakeholders</a></li>
+<li><a href="#sec-4-2-1-6">4.2.1.6. Current State Map</a></li>
+<li><a href="#sec-4-2-1-7">4.2.1.7. Measure</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-2-2">4.2.2. Scope and Level of Depth</a></li>
+<li><a href="#sec-4-2-3">4.2.3. Note</a></li>
+<li><a href="#sec-4-2-4">4.2.4. Delivery</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-3">4.3. <span class="todo TODO">TODO</span> Update Backlog</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Sprint Acceptance Tests</a>
+<ul>
+<li><a href="#sec-5-1">5.1. Background and History</a></li>
+<li><a href="#sec-5-2">5.2. Assignment: Conduct a VSM&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Checkpoint">Checkpoint</span></span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<br/>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> About this Sprint</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<img src="images/Background.png" alt="Background.png" width="50" style="border-radius:40% 0% 40% 0%;float:left;margin-right:1em;" /> This sprint presents a background to Agile and Lean. You will also start evaluating your current situation using Value Stream Mapping (VSM).
+</p>
+<br/>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Sprint Goals</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<b>Background:</b> The student will be familiar with the basic history of agile and lean software development, and the agile manifesto.
+</p>
+
+<p>
+<b>Value Stream Mapping:</b> The student will conduct a Value Stream Map in their context, and through this get an understanding of the current state and which values are important in this context.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Readings</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Book Chapters</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>M. Cohn, &ldquo;Succeeding with Agile&rdquo;, chapters 1-4
+</li>
+<li>J. Rasmusson &ldquo;The Agile Samurai&rdquo;, chapters 1-2
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Screencasts</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li><a href="https://connect.sunet.se/p5n422e3s89/">Agile &amp; Lean history</a>
+</li>
+<li><a href="https://connect.sunet.se/p56gakgd20z/">How was it before</a>
+</li>
+<li><a href="https://connect.sunet.se/p2mag7ulms4/">Agile &amp; Lean history line</a>
+</li>
+<li><a href="https://connect.sunet.se/p8m5uyf2tfc/">Lean house</a>
+</li>
+<li><a href="https://connect.sunet.se/p5ngtgya6oj/">What is agile</a>
+</li>
+<li><a href="https://connect.sunet.se/p5g0u7e0bf5/">Agile Manifesto</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Articles</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+<b>Value Stream Map.</b> [Khurum et al. 2014] Khurum M., Petersen K., Gorschek T., Extending Value Stream Mapping Through Waste Definition Beyond Customer Perspective, Journal of Software: Evolution and Process, in print (Note: Complementary material is available on the web-site, including templates for planning the value stream activity). DOI: 10.1002/smr.1647
+</p>
+
+<p>
+<b>Value Stream Map.</b> [McManus 2005] McManus, H. L. (2005), Product Development Value Stream Mapping (PDVSM) Manual Release 1.0.
+</p>
+
+<p>
+<b>Value Stream Map.</b> [Khurum et al. 2014, Appendix A]   Appendix A from Khurum et al. 2014  above.
+</p>
+
+<p>
+<b>Software Value Map.</b> [Khurum et al. 2013] Mahvish Khurum, Tony Gorschek, Magnus Wilson: The software value map &#x2013; an exhaustive collection of value aspects for the development of software intensive products. Journal of Software: Evolution and Process 25(7): 711-741 (2013)
+</p>
+
+<p>
+<b>Waste Measurements.</b> [Feyh 2013] Markus Feyh, Kai Petersen: Lean Software Development Measures and Indicators - A Systematic Mapping Study. LESS 2013: 32-47.
+</p>
+
+<p>
+<b>Example.</b> [Staron &amp; Meding 2011] Miroslaw Staron, Wilhelm Meding: Monitoring Bottlenecks in Agile and Lean Software Development Projects - A Method and Its Industrial Use. PROFES 2011: 3-16.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> Further Reading&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Optional">Optional</span></span></h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+<b>Value Stream Mapping.</b> [Mujtaba et al. 2010] Shahid Mujtaba, Robert Feldt, Kai Petersen: Waste and Lead Time Reduction in a Software Product Customization Process with Value Stream Maps. Australian Software Engineering Conference 2010:139-148.
+</p>
+
+<p>
+<b>Identifying Bottlenecks.</b> [Petersen &amp; Wohlin 2011] Petersen K., Wohlin C., Measuring the Flow of Lean Software Development, Software: Practice and Experience; vol. 41 no. 9; 2011.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Experiential Learning</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Introduction</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+To reflect upon the current way of working, and to constantly look for ways to improve this and reduce waste lies at the heart of agile and lean development. Many of the lean &ldquo;tools&rdquo; focus on process improvement in the small, but it is also important to look at the larger process. <i>Value Stream Mapping</i> is one of the more popular methodologies used for this purpose. In this assignment we augment the classic customer-focused value stream mapping with a broader picture on software value, with the help of the software value map. 
+</p>
+
+<p>
+The intentions of this assignment are to:
+</p>
+
+<ul class="org-ul">
+<li>Train you in the value stream mapping methodology
+</li>
+<li>Make you reflect upon the values that you and other stakeholders have in the current process.
+</li>
+<li>Create a starting point with which you can start to identify wastes and possible improvements to your current process
+</li>
+<li>Create a &ldquo;sandbox&rdquo; that we will use in subsequent assignments to see the effects of different agile/lean frameworks on your current way of working.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> <span class="todo TODO">TODO</span> Assignment: Conduct a VSM</h3>
+<div class="outline-text-3" id="text-4-2">
+</div><div id="outline-container-sec-4-2-1" class="outline-4">
+<h4 id="sec-4-2-1"><span class="section-number-4">4.2.1</span> Tasks</h4>
+<div class="outline-text-4" id="text-4-2-1">
+</div><div id="outline-container-sec-4-2-1-1" class="outline-5">
+<h5 id="sec-4-2-1-1"><span class="section-number-5">4.2.1.1</span> Context</h5>
+<div class="outline-text-5" id="text-4-2-1-1">
+<p>
+Describe the context of your company. In particular, what is the domain you are working in, how does the market look like, how would you characterize your processes (&ldquo;pure&rdquo; agile, lean, balanced hybrids, primarily plan-driven with few agile practices, primarily agile with a few plan-driven practices, and argue why you classify your process as such. Describe your role in the organization, and put yourself into a context in terms of where you are in the overall value delivery process. Also, describe your process in terms of activities, draw it in a way that you would represent it without any specific notation requirements.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2-1-2" class="outline-5">
+<h5 id="sec-4-2-1-2"><span class="section-number-5">4.2.1.2</span> Purpose</h5>
+<div class="outline-text-5" id="text-4-2-1-2">
+<p>
+Define the purpose of the VSM activity from your organizational point of view. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2-1-3" class="outline-5">
+<h5 id="sec-4-2-1-3"><span class="section-number-5">4.2.1.3</span> Values</h5>
+<div class="outline-text-5" id="text-4-2-1-3">
+<p>
+Reflect on what values you would like to achieve based on the software value map. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2-1-4" class="outline-5">
+<h5 id="sec-4-2-1-4"><span class="section-number-5">4.2.1.4</span> Scoping</h5>
+<div class="outline-text-5" id="text-4-2-1-4">
+<p>
+Set the start and end-point of your value stream activity (e.g. only development activity, from user need to release, etc.) and define the customers of the scoped process. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2-1-5" class="outline-5">
+<h5 id="sec-4-2-1-5"><span class="section-number-5">4.2.1.5</span> Stakeholders</h5>
+<div class="outline-text-5" id="text-4-2-1-5">
+<p>
+Think about who is interested in the process from the executioner point of view, i.e. who would you need to be on board to realize your activity?
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2-1-6" class="outline-5">
+<h5 id="sec-4-2-1-6"><span class="section-number-5">4.2.1.6</span> Current State Map</h5>
+<div class="outline-text-5" id="text-4-2-1-6">
+<p>
+Create a current state map of your processes. Note that you can use your own ways of representing the process, as existing notations are not well suited in illustrating iteration and parallelism of activities. It is important that the map is able to capture value adding and non-value adding time. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2-1-7" class="outline-5">
+<h5 id="sec-4-2-1-7"><span class="section-number-5">4.2.1.7</span> Measure</h5>
+<div class="outline-text-5" id="text-4-2-1-7">
+<p>
+In order to complement the map, measurements are often needed to objectify the analysis with respect to your defined goals and values. If you have data available in your company from which you can derive the measures to objectify your analysis, great. If you do not have that, think about how the measures/visualizations would most likely look for your company (e.g. do you have an even or discontinuous flow of work items through your process). You may also use expert assessments to create estimates for the different process steps.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2-2" class="outline-4">
+<h4 id="sec-4-2-2"><span class="section-number-4">4.2.2</span> Scope and Level of Depth</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<p>
+The level of detail of the value stream map may depend on the process and the complexity, as well as what you wish to achieve. A value map with less than five activities may be useful for initial reflections, but to have a deeper understanding you may benefit from drilling down further. Though, when having too many activities you may get lost in the details, missing the end-to-end perspective. The existing articles provide an idea of the level of detail that provided valuable insights in the existing cases. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2-3" class="outline-4">
+<h4 id="sec-4-2-3"><span class="section-number-4">4.2.3</span> Note</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<p>
+Please review subsequent assignments in this course before deciding on the scope, since you are going to use the output of this assignment when reflecting upon different agile/lean frameworks in them. If you set your scope too small or too large, this will become more difficult.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2-4" class="outline-4">
+<h4 id="sec-4-2-4"><span class="section-number-4">4.2.4</span> Delivery</h4>
+<div class="outline-text-4" id="text-4-2-4">
+<p>
+Deliver your assignment via e-mail as a written report or a well-annotated set of presentation slides to the course managers.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> <span class="todo TODO">TODO</span> Update Backlog</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+Based on what you have learnt in this sprint, update your Agile/Lean backlog accordingly. Specifically;
+</p>
+
+<ul class="org-ul">
+<li>Revisit the order of the course sprints. Are there any sprints you would like to do sooner or later?
+</li>
+<li>What can you take with you from this sprint into your own organisation?
+</li>
+<li>What do you need to learn more about?
+</li>
+</ul>
+
+<p>
+Add and move items in your Agile/Lean backlog according to your needs and priorities.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Sprint Acceptance Tests</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Background and History</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+You have completed this learning outcome when you have:
+</p>
+
+<ul class="org-ul">
+<li>Familiarised yourself with the origins and the history of agile and lean software development
+</li>
+<li>An overview of different agile and lean software development frameworks
+</li>
+<li>A shallow understanding of some of the more dominant agile/lean frameworks.
+</li>
+</ul>
+
+<p>
+Review Questions
+</p>
+
+<ul class="org-ul">
+<li>Why did Agile and Lean start ?
+</li>
+<li>What is your interpritation of the Agile Manifesto ?
+</li>
+<li>How does &ldquo;Manifesto&rdquo; fit you organisation ?
+</li>
+<li>Would you say that your organisation is using any Agile or Lean method ?
+<ul class="org-ul">
+<li>If so, what would that be ?
+<ul class="org-ul">
+<li>If you were to take another method and use that, what would fit best your operation?
+</li>
+<li>What would challenge your operation most ?
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> Assignment: Conduct a VSM&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Checkpoint">Checkpoint</span></span></h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+The Value Stream Mapping assignment is marked as Pass or Fail. The criteria for passing the assignment is that it is at least possible to use it for answering questions such as:
+</p>
+
+<ul class="org-ul">
+<li>What is the purpose of your value stream activity? What do you hope to achieve? Why?
+</li>
+<li>What are the values you would like to achieve? Why?
+</li>
+<li>Are the identified values sufficient so that it will not be a sub-optimisation to merely focus on this set?
+</li>
+<li>How do your values correspond to the values in the Software Value Map by Khurum et al?
+</li>
+<li>What are the start- and end-points of your intended value stream activity? Why these? How does a study of this part of the process fulfill your purpose?
+</li>
+<li>Is the scope of sufficient size so that the studied process actually influence the identified values?
+</li>
+<li>Is the scope of reasonable size so that it is possible, on this level, to track creation of the identified values? Will you be able to conduct the subsequent assignments or will your process become too large and complex?
+</li>
+<li>Who are your key stakeholders? What is a &ldquo;win-condition&rdquo; for them (i.e. what do you need to provide to make them happy)?
+</li>
+<li>Are there any agile or lean frameworks, or parts of them, that you are already using? Where? How? With what effect?
+</li>
+<li>How does the current process perform with respect to velocity, flow, etc.?
+</li>
+<li>What are the limitations to the current process when it comes to e.g. throughput or amount of incoming work?
+</li>
+<li>Is it possible to understand the process through which the value-adding/non-value-adding time was measured?
+</li>
+<li>Are the measures discussed and explained?
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2015-05-26</p>
+<p class="author">Author: Mikael Svahnberg</p>
+<p class="email">Email: <a href="mailto:Mikael.Svahnberg@bth.se">Mikael.Svahnberg@bth.se</a></p>
+<p class="date">Created: 2015-08-18 Tue 10:57</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.0.50.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

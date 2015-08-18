@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Sprint 0: Course Formalia</title>
+<!-- 2015-08-18 Tue 10:57 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Mikael Svahnberg" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="org/org.css" />
+
+<script type="text/javascript" src="http://orgmode.org/org-info.js">
+/**
+ *
+ * @source: http://orgmode.org/org-info.js
+ *
+ * @licstart  The following is the entire license notice for the
+ *  JavaScript code in http://orgmode.org/org-info.js.
+ *
+ * Copyright (C) 2012-2013 Free Software Foundation, Inc.
+ *
+ *
+ * The JavaScript code in this tag is free software: you can
+ * redistribute it and/or modify it under the terms of the GNU
+ * General Public License (GNU GPL) as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option)
+ * any later version.  The code is distributed WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+ *
+ * As additional permission under GNU GPL version 3 section 7, you
+ * may distribute non-source (e.g., minimized or compacted) forms of
+ * that code without the copy of the GNU GPL normally required by
+ * section 4, provided you include this license notice and a URL
+ * through which recipients can access the Corresponding Source.
+ *
+ * @licend  The above is the entire license notice
+ * for the JavaScript code in http://orgmode.org/org-info.js.
+ *
+ */
+</script>
+
+<script type="text/javascript">
+
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set("TOC_DEPTH", "4");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "0");
+org_html_manager.set("VIEW", "showall");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Sprint 0: Course Formalia</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. About this Sprint</a></li>
+<li><a href="#sec-2">2. Sprint Goals</a></li>
+<li><a href="#sec-3">3. Readings</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Course Formalia</a></li>
+<li><a href="#sec-3-2">3.2. Assignment Submission</a>
+<ul>
+<li><a href="#sec-3-2-1">3.2.1. Assignment Submission and Dates</a></li>
+<li><a href="#sec-3-2-2">3.2.2. Submissions</a></li>
+<li><a href="#sec-3-2-3">3.2.3. Resubmissions</a></li>
+<li><a href="#sec-3-2-4">3.2.4. A Note On Confidentiality</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Experiential Learning</a>
+<ul>
+<li><a href="#sec-4-1">4.1. <span class="todo TODO">TODO</span> Buy Course Books</a>
+<ul>
+<li><a href="#sec-4-1-1">4.1.1. Official Course Book</a></li>
+<li><a href="#sec-4-1-2">4.1.2. Additional Books</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-2">4.2. <span class="todo TODO">TODO</span> Post on Discussion Board</a></li>
+<li><a href="#sec-4-3">4.3. <span class="todo TODO">TODO</span> AdobeConnect</a>
+<ul>
+<li><a href="#sec-4-3-1">4.3.1. Equipment and Tutorials</a></li>
+<li><a href="#sec-4-3-2">4.3.2. Test</a></li>
+<li><a href="#sec-4-3-3">4.3.3. Known problems</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-4">4.4. <span class="todo TODO">TODO</span> Get Access to Articles</a></li>
+<li><a href="#sec-4-5">4.5. <span class="todo TODO">TODO</span> Establish Agile/Lean Backlog</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Sprint Acceptance Test</a></li>
+</ul>
+</div>
+</div>
+<br/>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> About this Sprint</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<img src="images/Formalia.png" alt="Formalia.png" width="50" style="border-radius:40% 0% 40% 0%;float:left;margin-right:1em;" /> This Sprint introduces the course and the course structure.
+</p>
+<br/>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Sprint Goals</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<b>Course Structure:</b> The student will be familiar with the structure of the course.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Readings</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Course Formalia</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Read the <a href="slides/Course_Intro.pdf">Introduction to the course lecture slides</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Assignment Submission</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Read and understand the following
+</p>
+</div>
+<div id="outline-container-sec-3-2-1" class="outline-4">
+<h4 id="sec-3-2-1"><span class="section-number-4">3.2.1</span> Assignment Submission and Dates</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li>The course is offered during two study periods (1 semester)
+</li>
+<li>During this time, you are expected complete all assignments and submit them for marking.
+</li>
+<li>Based on the marking, you <b>may</b> need to complement your submissions with additional material.
+</li>
+<li>Complementing assignments can be done during the semester, within four weeks of the end of the semester, or in August.
+</li>
+<li>Complementing assignments after the semester is only allowed if your original submissions were made during the semester and were non-trivial.
+</li>
+<li>An assignment may only be complemented twice.
+</li>
+<li>Given these constraints, you are free to plan your submissions as you see fit.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2-2" class="outline-4">
+<h4 id="sec-3-2-2"><span class="section-number-4">3.2.2</span> Submissions</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+Assignment submissions are done via e-mail as a written report or a well-annotated set of presentation slides, unless otherwhise stated.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-2-3" class="outline-4">
+<h4 id="sec-3-2-3"><span class="section-number-4">3.2.3</span> Resubmissions</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<p>
+In a resubmission, please:
+</p>
+
+<ul class="org-ul">
+<li>highlight changes you have made!
+</li>
+<li>discuss, where applicable, the changes you make
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2-4" class="outline-4">
+<h4 id="sec-3-2-4"><span class="section-number-4">3.2.4</span> A Note On Confidentiality</h4>
+<div class="outline-text-4" id="text-3-2-4">
+<p>
+You will submit your assignments on the course homepage, where the course managers will review them in order to give you feedback and to examine you on the course. You will also form study teams to review each other’s work. Apart from this, no-one else will see your assignments unless you decide to show them.
+There are ways to make sensitive information less sensitive. Some generic advice is to:
+</p>
+
+<ul class="org-ul">
+<li>Describe the types of stakeholders involved rather than the specific roles.
+</li>
+<li>Report numbers as percent of a total instead of the absolute numbers (for example, a process step may take x days or y% of the entire process), or express time in some generic &ldquo;time unit&rdquo; measure.
+</li>
+<li>If the motivations for your choices are sensitive, then keep them in a separate document that you can share with the course managers, and share a less sensitive version with your study team.
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Experiential Learning</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> <span class="todo TODO">TODO</span> Buy Course Books</h3>
+<div class="outline-text-3" id="text-4-1">
+</div><div id="outline-container-sec-4-1-1" class="outline-4">
+<h4 id="sec-4-1-1"><span class="section-number-4">4.1.1</span> Official Course Book</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<p>
+<img src="images/Cohn.jpg" alt="Cohn.jpg" width="100" style="float:left;margin-right:1em;" /> M.Cohn, <i>Succeeding with Agile: Software Development Using Scrum</i>, Addison-Wesley Professional, 2009. ISBN-10: 0321579364 | ISBN-13: 978-0321579362.
+</p>
+<br/><br/><br/><br/><br/><br/>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-2" class="outline-4">
+<h4 id="sec-4-1-2"><span class="section-number-4">4.1.2</span> Additional Books</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<p>
+<img src="images/Rasmusson.jpg" alt="Rasmusson.jpg" width="100" style="float:left;margin-right:1em;" /> J. Rasmusson <i>The Agile Samurai</i>, Pragmatic Bookshelf, 2010. ISBN-10: 1934356581 | ISBN-13: 978-1934356586.
+</p>
+
+<p>
+This book contributes some additional perspectives to the main course book. Reading both will give you fairly ok background knowledge on agile/lean (even if Lean is never explicitly mentioned).
+</p>
+
+<br/><br/><br/><br/><br/><br/>
+
+<p>
+<img src="images/Leffingwell.jpg" alt="Leffingwell.jpg" width="100" style="float:left;margin-right:1em;" /> D. Leffingwell <i>Agile Software Requirements</i>, Addison-Wesley Professional, 2011. ISBN-10: 0321635841 | ISBN-13: 978-0321635846.
+</p>
+
+<p>
+Gives a good overview of what is going on outside the project sprints. Addresses the question how you set up your entire organisation such that you transfer your market strategies and roadmaps into specific user stories that are implementable by sprints.
+</p>
+
+<br/><br/><br/><br/><br/><br/>
+
+<p>
+<img src="images/Poppendieck.jpg" alt="Poppendieck.jpg" width="100" style="float:left;margin-right:1em;" /> M. Poppendieck, T. Poppendieck <i>Lean Software Development</i>, Addison-Wesley Professional, 2003. ISBN-10: 0321150783 | ISBN-13: 978-0321150783.
+</p>
+
+<p>
+Goes through the lean principles and discuss how they apply to software. I find this book particularly interesting because it is a third of the size of any other book on lean I have read, and yet conveys all the relevant information. Somehow, I can&rsquo;t help but think that the authors of the other lean books have missed the point.
+</p>
+
+<br/><br/><br/><br/><br/><br/>
+
+<p>
+<img src="images/Yourbook.png" alt="Yourbook.png" width="100" style="float:left;margin-right:1em;" /> <i>Your Book</i>
+</p>
+
+<p>
+If you find a book that you think should be included here, please send me an e-mail (address in the footer), and tell me about the book and why it should be included.
+</p>
+<br/><br/><br/><br/><br/><br/>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> <span class="todo TODO">TODO</span> Post on Discussion Board</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Join the <a href="https://groups.google.com/forum/#!forum/agilelean">Course Discussion Board</a> and, once your request to join has been approved, post a short introductory paragraph about yourself. This provides info to your fellow students, and also verifies that you have joined the discussion group and can post to it.
+</p>
+
+<p>
+Configure the group settings to send messages posted to the group as an email to yourself.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> <span class="todo TODO">TODO</span> AdobeConnect</h3>
+<div class="outline-text-3" id="text-4-3">
+</div><div id="outline-container-sec-4-3-1" class="outline-4">
+<h4 id="sec-4-3-1"><span class="section-number-4">4.3.1</span> Equipment and Tutorials</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<ul class="org-ul">
+<li>Get a decent headset. We recommend that you make sure that you have a decent headset with microphone (for example, the USB headset Logitech H390, or equivalent from any other brand). The sound quality in your mobile phone headsets is usually not sufficient.
+</li>
+<li>Go through the <a href="https://studentportal.bth.se/web/studentportal.nsf/web.xsp/adobe_connect">Adobe Connect Tutorials</a>.
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4-3-2" class="outline-4">
+<h4 id="sec-4-3-2"><span class="section-number-4">4.3.2</span> Test</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<p>
+The course has a dedicated Adobe Connect meeting room that is always open and available for you to use &#x2013; for example for collaborating with other students in the course. At certain regular times (to be announced later) teachers in the course are also online here for discussions.
+</p>
+
+<p>
+Because of reasons, we do not publish the address to the meeting room here. Instead, you will find it in the <a href="https://groups.google.com/forum/#!forum/agilelean">Course Discussion Board</a>.
+</p>
+
+<p>
+Once you are &ldquo;in&rdquo;, there is an audio setup guide that you should go through the first time you visit.
+</p>
+
+<p>
+Experience tells us that the first times you connect there will be various problems before you have the audio working. Expect this, and plan accordingly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-3-3" class="outline-4">
+<h4 id="sec-4-3-3"><span class="section-number-4">4.3.3</span> Known problems</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<ul class="org-ul">
+<li>On OSX, the right audio source/destination need to be selected <b>before</b> you connect to the Adobe Conenct meeting room. Alt-click on the speaker-icon in the menu bar to check this.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> <span class="todo TODO">TODO</span> Get Access to Articles</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+Since this is, after all, a Master&rsquo;s level course, we make heavy use of research articles. References to these are listed as Readings under each module.
+</p>
+
+<p>
+Because of copyrights, we are not able to publish the actual articles on this site. If you are registered on the course you will gain access to a compendium with the referenced articles.
+</p>
+
+<p>
+You will also, as a student, have access to the <a href="http://www.bth.se/bib">university&rsquo;s online database</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-5" class="outline-3">
+<h3 id="sec-4-5"><span class="section-number-3">4.5</span> <span class="todo TODO">TODO</span> Establish Agile/Lean Backlog</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+Create an Agile/Lean Backlog. As a start, this backlog ought to contain the sprints from this course, in the order you would like to study them. Add other items into the backlog based on what you would like to learn more about, and what you would like to achieve in your own organisation. Order the items in your Agile/Lean backlog according to your needs and priorities.
+</p>
+
+<p>
+This Agile/Lean backlog is revisited in each of the sprints to keep it up to date.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Sprint Acceptance Test</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+You have completed this sprint when you have:
+</p>
+
+<ul class="org-ul">
+<li>Viewed the Course Formalia lecture
+</li>
+<li>Acquired necessary equipment and tested AdobeConnect
+</li>
+<li>Signed up on the course discussion forum and posted an introduction about yourself.
+</li>
+<li>Browsed books for the course and ordered the ones you wish to buy.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2015-05-26</p>
+<p class="author">Author: Mikael Svahnberg</p>
+<p class="email">Email: <a href="mailto:Mikael.Svahnberg@bth.se">Mikael.Svahnberg@bth.se</a></p>
+<p class="date">Created: 2015-08-18 Tue 10:57</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.0.50.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
