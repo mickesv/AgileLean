@@ -161,19 +161,19 @@ div#postamble a:hover {
 }
 
 table {
-    border: 0px;
+    border: 1px solid #EEEEEE;
     font-size: 100%;
     border-collapse: collapse;
     margin: .5em 0;
 }
 
-th, td {
-    border: 0px solid #777;
+th, tr, td {
+    border: 1px solid #EEEEEE;
     padding: .3em;
     margin: 2px;
 }
 th {
-    background: #eee;
+    background: #DDDDDD;
 }
 
 span.underline {

@@ -3,8 +3,8 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Sprint 4:  SCRUM</title>
-<!-- 2015-08-19 Wed 10:02 -->
+<title>Sprint 7:  Implementing Agile/Lean</title>
+<!-- 2015-08-19 Wed 13:45 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Mikael Svahnberg" />
@@ -207,10 +207,52 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
 </head>
 <body>
 <div id="content">
-<h1 class="title">Sprint 4:  SCRUM</h1>
+<h1 class="title">Sprint 7:  Implementing Agile/Lean</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
@@ -220,18 +262,26 @@ for the JavaScript code in this tag.
 <li><a href="#sec-3">3. Readings</a>
 <ul>
 <li><a href="#sec-3-1">3.1. Book Chapters</a></li>
-<li><a href="#sec-3-2">3.2. Screencasts</a></li>
-<li><a href="#sec-3-3">3.3. Articles</a></li>
+<li><a href="#sec-3-2">3.2. Articles</a></li>
+<li><a href="#sec-3-3">3.3. Other Material</a></li>
 <li><a href="#sec-3-4">3.4. Further Reading&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Optional">Optional</span></span></a></li>
 </ul>
 </li>
 <li><a href="#sec-4">4. Experiential Learning</a>
 <ul>
 <li><a href="#sec-4-1">4.1. Introduction</a></li>
-<li><a href="#sec-4-2">4.2. <span class="todo TODO">TODO</span> Apply SCRUM</a>
+<li><a href="#sec-4-2">4.2. <span class="todo TODO">TODO</span> Construct a Proposal for an Agile/Lean Implementation Plan</a>
 <ul>
-<li><a href="#sec-4-2-1">4.2.1. Tasks</a></li>
-<li><a href="#sec-4-2-2">4.2.2. Delivery</a></li>
+<li><a href="#sec-4-2-1">4.2.1. Tasks</a>
+<ul>
+<li><a href="#sec-4-2-1-1">4.2.1.1. Select Framework</a></li>
+<li><a href="#sec-4-2-1-2">4.2.1.2. Construct Transformation Plan</a></li>
+<li><a href="#sec-4-2-1-3">4.2.1.3. Detail Requirements and Testing Activities</a></li>
+<li><a href="#sec-4-2-1-4">4.2.1.4. Detail In-Process Tracking Activities</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-2-2">4.2.2. Scope and Level of Depth</a></li>
+<li><a href="#sec-4-2-3">4.2.3. Delivery</a></li>
 </ul>
 </li>
 <li><a href="#sec-4-3">4.3. <span class="todo TODO">TODO</span> Update Backlog</a></li>
@@ -239,7 +289,7 @@ for the JavaScript code in this tag.
 </li>
 <li><a href="#sec-5">5. Sprint Acceptance Tests</a>
 <ul>
-<li><a href="#sec-5-1">5.1. Assignment: Apply Scrum&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Checkpoint">Checkpoint</span></span></a></li>
+<li><a href="#sec-5-1">5.1. Assignment: Construct a Proposal for an Agile/Lean Implementation Plan&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Checkpoint">Checkpoint</span></span></a></li>
 </ul>
 </li>
 </ul>
@@ -251,7 +301,7 @@ for the JavaScript code in this tag.
 <h2 id="sec-1"><span class="section-number-2">1</span> About this Sprint</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-<img src="images/Scrum.png" alt="Scrum.png" width="50" style="border-radius:40% 0% 40% 0%;float:left;margin-right:1em;" /> This Sprint focuses on the agile development methodology SCRUM.
+<img src="images/Implementing.png" alt="Implementing.png" width="50" style="border-radius:40% 0% 40% 0%;float:left;margin-right:1em;" /> This sprint builds upon the previous sprints by going deeper into the details and challenges faced when actually constructing an implementation plan for an agile/lean transition. 
 </p>
 <br/>
 </div>
@@ -261,7 +311,7 @@ for the JavaScript code in this tag.
 <h2 id="sec-2"><span class="section-number-2">2</span> Sprint Goals</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-The student will gain a deep understanding of SCRUM, and how to apply it to their context.
+The student will have a deep insight into the challenges involved in transitioning an existing organisation into an agile/lean methodology and mindset.
 </p>
 </div>
 </div>
@@ -272,61 +322,55 @@ The student will gain a deep understanding of SCRUM, and how to apply it to thei
 <h3 id="sec-3-1"><span class="section-number-3">3.1</span> Book Chapters</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
-<li>M. Cohn &ldquo;Succeeding with Agile&rdquo;, chapters 14-16
+<li>M. Cohn &ldquo;Succeeding with Agile&rdquo;, chapters 19-20
 </li>
-<li>J. Rasmusson &ldquo;The Agile Samurai&rdquo;, chapters 6-8
+<li>J. Rasmusson &ldquo;The Agile Samurai&rdquo;, chapters 12-14
 </li>
 </ul>
 </div>
 </div>
 <div id="outline-container-sec-3-2" class="outline-3">
-<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Screencasts</h3>
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Articles</h3>
 <div class="outline-text-3" id="text-3-2">
-<ul class="org-ul">
-<li><a href="https://connect.sunet.se/p34d9dsrkcy/">Scrum framework</a>
-</li>
-<li><a href="https://connect.sunet.se/p8mimfrtz4h/">Scrum Sprint</a>
-</li>
-<li><a href="https://connect.sunet.se/p3tjabzmn6e/">Scrum Roles</a>
-</li>
-<li><a href="https://connect.sunet.se/p85i3jj6ka4/">Scrum Artifacts</a>
-</li>
-<li><a href="https://connect.sunet.se/p2xzkapkh1f/">Scrum Ceremony</a>
-</li>
-<li><a href="https://connect.sunet.se/p818yth170a/">Scrum Practicies</a>
-</li>
-<li><a href="https://connect.sunet.se/p6ym0wrc56r/">Scrum Story Points</a>
-</li>
-<li><a href="https://connect.sunet.se/p4jeu2ivl0e/">Scrum Capacity</a>
-</li>
-</ul>
+<p>
+<b>Impementation Challenges</b> [Boehm &amp; Turner 2005] Barry W. Boehm, Richard Turner: Management Challenges to Implementing Agile Processes in Traditional Development Organizations. IEEE Software 22(5): 30-39 (2005).
+</p>
+
+<p>
+<b>Agile Practices.</b> [Williams 2012 (table 2)]  L. Williams, What agile teams think of agile principles, Commun. ACM, vol. 55, issue 4, pp. 71-76, 2012.
+</p>
+
+<p>
+<b>Agile Practices.</b> [Kurapati 2012 (figure 1)] Narendra Kurapati, Venkata Sarath Chandra Manyam, Kai Petersen: Agile Software Development Practice Adoption Survey. XP 2012, pp.16-30.
+</p>
+
+<p>
+<b>Lean Practices.</b> [Cawley et al. 2013] Oisín Cawley, Xiaofeng Wang, Ita Richardson: Lean Software Development - What Exactly Are We Talking About? LESS 2013, pp.16-31.
+</p>
+
+<p>
+<b>Applying Lean/Agile</b> [Wang et al. 2012] X. Wang, K. Conboy, O. Cawley, ``Leagile&rsquo;&rsquo; software development: An experience report analysis of the applicationof lean approaches in agile software development, in Journal of Systems and Software, 85(2012):1287&#x2013;1299.
+</p>
 </div>
 </div>
 <div id="outline-container-sec-3-3" class="outline-3">
-<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Articles</h3>
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Other Material</h3>
 <div class="outline-text-3" id="text-3-3">
-<p>
-<b>SCRUM, Experiences from</b> [Moe et al. 2010] Nils Brede Moe, Torgeir Dingsøyr, Tore Dybå: A teamwork model for understanding an agile team: A case study of a Scrum project. Information \&amp; Software Technology 52(5): 480-491 (2010).
-</p>
-
-<p>
-<b>Agile Transitioning, developers&rsquo; opinions</b> [Laanti et al. 2011] Maarit Laanti, Outi Salo, Pekka Abrahamsson: Agile methods rapidly replacing traditional methods at Nokia: A survey of opinions on agile transformation. Information \&amp; Software Technology 53(3): 276-290 (2011).
-</p>
-
-<p>
-<b>Agile Transitioning, success and failure factors</b> [Chow &amp; Cao 2008] T. Chow, DB Cao, A survey study of critical success factors in agile software projects, Journal of Systems and Software 81 (2008) 961–971.
-</p>
+<ul class="org-ul">
+<li><a href="material/AgileTestingResourceGuide.pdf">Agile Testing Resource Guide</a>
+</li>
+</ul>
 </div>
 </div>
 <div id="outline-container-sec-3-4" class="outline-3">
 <h3 id="sec-3-4"><span class="section-number-3">3.4</span> Further Reading&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Optional">Optional</span></span></h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
-<b>Scaled Agile Framework</b> [Leffingwell 2011] D. Leffinwell &ldquo;Agile Software Requirements&rdquo;, Addison-Wesley Professional, 2011. ISBN: 0321635841.
+<b>Agile Transitioning, success and failure factors</b> [Chow &amp; Cao 2008] T. Chow, DB Cao, A survey study of critical success factors in agile software projects, Journal of Systems and Software 81 (2008) 961–971.
 </p>
 
 <p>
-<b>Scaled Agile Framework</b> <a href="http://www.scaledagileframework.com/">http://www.scaledagileframework.com/</a>
+<b>Agile/Lean Continuous Project Monitoring</b> [Miranda et al. 2010] Eduardo Miranda, Pierre Bourque: Agile monitoring using the line of balance. Journal of Systems and Software 83(7):1205-1215 (2010).
 </p>
 </div>
 </div>
@@ -338,41 +382,150 @@ The student will gain a deep understanding of SCRUM, and how to apply it to thei
 <h3 id="sec-4-1"><span class="section-number-3">4.1</span> Introduction</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
-There are three principal ways of imposing changes; you can pick a complete existing framework and impose that over the existing process, you can cherry-pick from a smorgasbord of agile/lean methodologies and stitch together to form your own framework, or you may use a free-form analysis of the current map and suggest changes as you see them. There is an increasing level of difficulty between these steps; in order to stitch together your own framework you need to know the consequences of each of your decisions, something which is implicitly already done in an existing framework. Obviously, free-forming your analysis and improvement suggestions requires even further knowledge about process improvement.
+Once an improvement has been identified and evaluated by &ldquo;dry-running&rdquo; through imposing it over the current state to form a future state map, the next step is to hammer out the details of the improvement even further. Most importantly, rather than imposing what may be a large change in a big-bang process change, it is advisable to implement changes in smaller steps. Here, the order becomes important as some parts of e.g. a framework depend on that other parts are already in place. Moreover, by imposing a change in the right order and provide &ldquo;low hanging fruit&rdquo; early, you may increase the buy-in from the involved stakeholders.
 </p>
 
 <p>
-The intention of this assignment is to use your existing process as a playground to see what would be required to implement a (potentially) different developent practice, i.e. Scrum. This gives you insight into how Scrum is constructed, and the typical elements and mindsets that are embedded in agile/lean frameworks.
+Three core principles of agile/lean are to:
+</p>
+<ul class="org-ul">
+<li>get the right requirements,
+</li>
+<li>test early and often, and
+</li>
+<li>make sure you know where you are in the process
+</li>
+</ul>
+
+<p>
+Therefore, we ask in this assignment that you pay special attention to these in your implementation plan proposal.
+</p>
+
+<p>
+The intention of this assignment is to give you an insight into the additional complexity that comes when you are actually trying break down a larger framework into smaller pieces, and when trying to change an existing process in order to introduce something new.
 </p>
 </div>
 </div>
 <div id="outline-container-sec-4-2" class="outline-3">
-<h3 id="sec-4-2"><span class="section-number-3">4.2</span> <span class="todo TODO">TODO</span> Apply SCRUM</h3>
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> <span class="todo TODO">TODO</span> Construct a Proposal for an Agile/Lean Implementation Plan</h3>
 <div class="outline-text-3" id="text-4-2">
 </div><div id="outline-container-sec-4-2-1" class="outline-4">
 <h4 id="sec-4-2-1"><span class="section-number-4">4.2.1</span> Tasks</h4>
 <div class="outline-text-4" id="text-4-2-1">
+</div><div id="outline-container-sec-4-2-1-1" class="outline-5">
+<h5 id="sec-4-2-1-1"><span class="section-number-5">4.2.1.1</span> Select Framework</h5>
+<div class="outline-text-5" id="text-4-2-1-1">
 <p>
-Apply Scrum as a development framework for your entire development process, and pay special attention to the following:
+Based on your studies in previous assignments, pick \emph{one} framework (e.g, Srum, DAD, Kanban, JIT, etc.) that you would like to continue further with.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-2-1-2" class="outline-5">
+<h5 id="sec-4-2-1-2"><span class="section-number-5">4.2.1.2</span> Construct Transformation Plan</h5>
+<div class="outline-text-5" id="text-4-2-1-2">
+<p>
+For the selected framework, propose an implementation plan how to go from the current state to the future state.
 </p>
 
 <ul class="org-ul">
-<li>Transform your VSM process so that it fits into the Scrum workflow.
+<li>In which order are you going to make the changes (e.g. introducing the practices)?
 </li>
-<li>Describe the steps by which Scrum would produce the input to the process in your VSM.
+<li>Which practices and changes should be done together?
 </li>
-<li>Describe how your VSM process fits into the context of a sprint.
+<li>Would you change big-bang or incremental, and why?
 </li>
-<li>Describe the steps by which Scrum will take the output from your VSM process and deliver value to the customer.
+<li>What are the impediments and constraints you may face, and how do you overcome them?
 </li>
-<li>Reason about the values that Scrum, as a development framework, focus on.    
+<li>What is the cost-benefit of the changes overall, and for each increment, and why?
 </li>
 </ul>
 </div>
 </div>
+
+<div id="outline-container-sec-4-2-1-3" class="outline-5">
+<h5 id="sec-4-2-1-3"><span class="section-number-5">4.2.1.3</span> Detail Requirements and Testing Activities</h5>
+<div class="outline-text-5" id="text-4-2-1-3">
+<p>
+To make sure you cover your endpoints, we also ask you to study the requirements and the testing activities connected to your process. This may mean that you have to go outside your previously used process in order to find answers to the following questions:
+</p>
+
+<ul class="org-ul">
+<li>Describe in detail the processes (including roles and responsibilities, and when the processes are invoked) for taking care of:
+<ul class="org-ul">
+<li>Getting requirements and negotiating them with the user
+</li>
+<li>new requirements
+</li>
+<li>changed requirements
+</li>
+<li>reprioritised requirements
+</li>
+<li>removed / dropped requirements.
+</li>
+</ul>
+</li>
+
+<li>Describe your processes from the following perspectives:
+<ul class="org-ul">
+<li>Before a requirement is being implemented (product management)
+</li>
+<li>While a requirement is being implemented
+</li>
+<li>When a requirement has already been implemented (obviously not applicable for new requirements).
+</li>
+</ul>
+</li>
+
+<li>Describe in detail the processes (including roles and responsibilities, and when the processes are invoked) for:
+<ul class="org-ul">
+<li>Describing acceptance tests
+</li>
+<li>Describing unit and integration tests
+</li>
+<li>Automating testing (if applicable)
+</li>
+<li>Integrating testing as an integral part of software development
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2-1-4" class="outline-5">
+<h5 id="sec-4-2-1-4"><span class="section-number-5">4.2.1.4</span> Detail In-Process Tracking Activities</h5>
+<div class="outline-text-5" id="text-4-2-1-4">
+<p>
+Similarly, we want you to to have a minimum grasp of how to visualise and measure the process as it is being executed. Therefore, we ask you to complete the following questions:
+</p>
+
+<ul class="org-ul">
+<li>Describe a detailed example of how to use \emph{Kanban} to track the status of your requirements/user stories.
+</li>
+
+<li>Describe a detailed example of how you plan to measure your \emph{velocity}.
+<ul class="org-ul">
+<li>Provide an example of a burndown chart, and describe what can be seen.
+</li>
+<li>How will you use your measured velocity for planning in the future?
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <div id="outline-container-sec-4-2-2" class="outline-4">
-<h4 id="sec-4-2-2"><span class="section-number-4">4.2.2</span> Delivery</h4>
+<h4 id="sec-4-2-2"><span class="section-number-4">4.2.2</span> Scope and Level of Depth</h4>
 <div class="outline-text-4" id="text-4-2-2">
+<p>
+In order to present a viable implementation plan, you may have to go deeper than what you have previously done. You may also need to raise your view to see what impediments may exist outside the process you focus on.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-2-3" class="outline-4">
+<h4 id="sec-4-2-3"><span class="section-number-4">4.2.3</span> Delivery</h4>
+<div class="outline-text-4" id="text-4-2-3">
 <p>
 Deliver your assignment via e-mail as a written report or a well-annotated set of presentation slides to the course managers.
 </p>
@@ -401,26 +554,25 @@ Add and move items in your Agile/Lean backlog according to your needs and priori
 </div>
 </div>
 </div>
+
 <div id="outline-container-sec-5" class="outline-2">
 <h2 id="sec-5"><span class="section-number-2">5</span> Sprint Acceptance Tests</h2>
 <div class="outline-text-2" id="text-5">
 </div><div id="outline-container-sec-5-1" class="outline-3">
-<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Assignment: Apply Scrum&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Checkpoint">Checkpoint</span></span></h3>
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Assignment: Construct a Proposal for an Agile/Lean Implementation Plan&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Checkpoint">Checkpoint</span></span></h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 The assignment is marked as Pass or Fail. The criteria for passing the assignment is that it is at least possible to use it for answering questions such as:
 </p>
 
 <ul class="org-ul">
-<li>Is it possible to see how the studied process fits into a development methodology based on Scrum?
+<li>Are all the proposed changes accounted for?
 </li>
-<li>Is it possible to understand how requirements enter the described process and how they are handled throughout the development process?
+<li>Does the proposed implementation plan deliver the expected values?
 </li>
-<li>Is it possible to understand which values are affected by the development process, where thet are affected, and how?
+<li>Will you be able to satisfy your stakeholders if you would implement the plan as proposed (cf. the win-conditions of your key stakeholders)?
 </li>
-<li>Is it possible to understand how value is delivered to the customer?
-</li>
-<li>Is there a discussion about the values that Scrum focus on?
+<li>Are the costs and benefits of each increment in the plan discussed and motivated?
 </li>
 </ul>
 </div>
@@ -428,10 +580,10 @@ The assignment is marked as Pass or Fail. The criteria for passing the assignmen
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 2015-08-18</p>
+<p class="date">Date: 2015-08-19</p>
 <p class="author">Author: Mikael Svahnberg</p>
 <p class="email">Email: <a href="mailto:Mikael.Svahnberg@bth.se">Mikael.Svahnberg@bth.se</a></p>
-<p class="date">Created: 2015-08-19 Wed 10:02</p>
+<p class="date">Created: 2015-08-19 Wed 13:45</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.0.50.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
